@@ -1,1 +1,85 @@
+Documentação: Comandos Básicos do Linux e Estrutura de Diretórios
+1. Comandos Básicos do Linux
+1.1 cd
+Finalidade: Mudar o diretório atual no terminal.
+Uso: cd /caminho/para/diretorio
+1.2 mkdir
+Finalidade: Criar um novo diretório.
+Uso: mkdir nome_do_diretorio
+Exemplo: mkdir ~/SEU_NOME_SOBRENOME/SESC
+1.3 ls
+Finalidade: Listar os arquivos e diretórios no diretório atual.
+Uso: ls
+Exemplo: ls ~/SEU_NOME_SOBRENOME
+1.4 echo
+Finalidade: Exibir uma mensagem ou texto no terminal.
+Uso: echo "mensagem"
+Exemplo: echo -e "Linha 1\nLinha 2" (com -e, permite interpretação de caracteres especiais).
+1.5 touch
+Finalidade: Criar um novo arquivo vazio ou atualizar a data de modificação de um arquivo existente.
+Uso: touch nome_do_arquivo.txt
+1.6 Redirecionamento (> e >>)
+Finalidade:
+>: Redirecionar a saída para um arquivo, criando-o ou sobrescrevendo.
+>>: Adicionar a saída a um arquivo existente.
+Exemplo:
+echo "Texto" > arquivo.txt (cria ou sobrescreve arquivo.txt)
+echo "Texto adicional" >> arquivo.txt (adiciona ao final de arquivo.txt)
+2. Estrutura de Diretórios e Arquivos
+2.1 Criar a Estrutura de Diretórios
+Para criar a estrutura de diretórios conforme especificado:
 
+bash
+Copiar código
+mkdir -p ~/SEU_NOME_SOBRENOME/SESC/BEL ~/SEU_NOME_SOBRENOME/SESC/SAN ~/SEU_NOME_SOBRENOME/SESC/ITA
+mkdir -p ~/SEU_NOME_SOBRENOME/SENAI/BRA/Tornearia ~/SEU_NOME_SOBRENOME/SENAI/BRA/Fresagem ~/SEU_NOME_SOBRENOME/SENAI/BRA/Soldagem
+mkdir -p ~/SEU_NOME_SOBRENOME/SENAI/GUA/Eletricista ~/SEU_NOME_SOBRENOME/SENAI/TAT/Drywall ~/SEU_NOME_SOBRENOME/SENAI/PJS/Empilhadeira
+2.2 Criar Arquivos e Adicionar Conteúdo
+Na Pasta SESC
+bash
+Copiar código
+# BEL/danca.txt
+echo -e "Danças Brasileiras\nDanças de Salão" > ~/SEU_NOME_SOBRENOME/SESC/BEL/danca.txt
+
+# SAN/natacao.md
+echo -e "Crawl\nPeito\nCostas\nBorboleta" > ~/SEU_NOME_SOBRENOME/SESC/SAN/natacao.md
+
+# ITA/capoeira.sh
+echo -e "Meia Lua de Frente\nMeia Lua de Compasso\nPisão Rodado" > ~/SEU_NOME_SOBRENOME/SESC/ITA/capoeira.sh
+Na Pasta SENAI
+bash
+Copiar código
+# BRA/Tornearia/cal_nov_2024.txt
+echo "Turma A: 01/11 até 30/11" > ~/SEU_NOME_SOBRENOME/SENAI/BRA/Tornearia/cal_nov_2024.txt
+
+# BRA/Fresagem/cal_dez_2024.txt
+echo "Turma B: 01/12 até 31/12" > ~/SEU_NOME_SOBRENOME/SENAI/BRA/Fresagem/cal_dez_2024.txt
+
+# BRA/Soldagem/cal_jan_2025.txt
+echo "Turma C: 01/01 até 31/01" > ~/SEU_NOME_SOBRENOME/SENAI/BRA/Soldagem/cal_jan_2025.txt
+
+# GUA/Eletricista/cal_jan_2025.txt
+echo "Turma A: 01/01 até 31/01" > ~/SEU_NOME_SOBRENOME/SENAI/GUA/Eletricista/cal_jan_2025.txt
+
+# TAT/Drywall/cal_nov_2024.md
+echo "Turma A: 01/11 até 30/11" > ~/SEU_NOME_SOBRENOME/SENAI/TAT/Drywall/cal_nov_2024.md
+
+# PJS/Empilhadeira/cal_jan_2025.sh
+echo "Turma A: 01/01 até 31/01" > ~/SEU_NOME_SOBRENOME/SENAI/PJS/Empilhadeira/cal_jan_2025.sh
+3. Mover Diretórios
+Para mover o diretório SENAC para o diretório raphael:
+
+3.1 Criar o Diretório raphael
+bash
+Copiar código
+mkdir ~/raphael
+3.2 Mover o Diretório SENAC
+bash
+Copiar código
+mv ~/SENAC ~/raphael/
+Observações
+Certifique-se de ter permissões adequadas.
+Utilize o comando ls para verificar se o diretório foi movido com sucesso:
+bash
+Copiar código
+ls ~/raphael
